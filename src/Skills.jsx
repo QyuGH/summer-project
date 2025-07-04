@@ -1,32 +1,48 @@
 
-function Skills(){
-    const icons = [
-        {file : "/tools/html.svg",     name : "HTML"},
-        {file : "/tools/css.svg",      name : "CSS"},
-        {file : "/tools/js.svg",       name : "JavaScript"},
-        {file : "/tools/react.svg",    name : "React"},
-        {file : "/tools/tailwind.svg", name : "Tailwind"},
-        {file : "/tools/php.svg",      name : "PHP"},
-        {file : "/tools/java.svg",     name : "Java"},
-        {file : "/tools/python.svg",   name : "Python"},
-        {file : "/tools/git.svg",      name : "Git"},
-        {file : "/tools/github.svg",   name : "Github"}       
-    ]
+function Cards() {
+  const icons = [
+    { file: "/tools/html.svg", name: "HTML" },
+    { file: "/tools/css.svg", name: "CSS" },
+    { file: "/tools/js.svg", name: "JavaScript" },
+    { file: "/tools/react.svg", name: "React" },
+    { file: "/tools/tailwind.svg", name: "Tailwind" },
+    { file: "/tools/php.svg", name: "PHP" },
+    { file: "/tools/java.svg", name: "Java" },
+    { file: "/tools/python.svg", name: "Python" },
+    { file: "/tools/sql.svg", name: "MySQL" },
+    { file: "/tools/git.svg", name: "Git" },
+    { file: "/tools/github.svg", name: "Github" },
+  ];
 
-    return (
-        <>
-            <section className="grid grid-cols-3 md:grid-cols-5 sm:grid-cols-5 gap-2 place-items-center border-2 ">
-                {icons.map((icon) => (
-                    <div key={icon.name} className=" overflow-hidden flex flex-col items-center border-2">
-                        <div className="w-20 h-20 overflow-hidden">
-                            <img src={icon.file} alt={icon.name} className="object-cover w-full h-full"/>
-                        </div>
-                        <p>{icon.name}</p>
-                    </div>
-                ))}
-            </section>
-        </>
-    )
+  return (
+    <>
+      {icons.map((icon) => (
+        <div
+          key={icon.name}
+          className="flex flex-col items-center gap-0.5 p-4 w-full min-w-0 bg-blue-900"
+        >
+          <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 overflow-hidden">
+            <img
+              src={icon.file}
+              alt={icon.name}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <p className="text-xs">{icon.name}</p>
+        </div>
+      ))}
+    </>
+  );
+}
+
+function Skills() {
+  return (
+    <>
+      <section className="skill-card gap-1 px-4">
+        <Cards></Cards>
+      </section>
+    </>
+  );
 }
 
 export default Skills
