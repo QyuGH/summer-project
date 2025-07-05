@@ -38,8 +38,12 @@ function Cards() {
 function Skills() {
   return (
     <>
-      <section className="skill-card gap-1 px-4">
-        <Cards></Cards>
+      <section>
+        <h1>Skills</h1>
+        <p>Here are the skills I'm proficient</p>
+        <div className="skill-card gap-1">
+          <Cards></Cards>
+        </div>
       </section>
     </>
   );

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <section className="flex flex-col max-w-7xl m-auto border-2 ">
+      <section className="flex flex-col max-w-7xl m-auto border-2 px-8">
         <Home></Home>
         <About></About>
         <Projects></Projects>
