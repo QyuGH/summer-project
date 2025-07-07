@@ -6,7 +6,7 @@ import Contact from "./components/Contact.jsx";
 
 function Content(){
     return (
-        <main id="main-content">
+        <main id="main-content" className="flex flex-col gap-16 max-w-7xl px-8 sm:px-12 m-auto overflow-hidden">
             <Home></Home>
             <About></About>
             <Projects></Projects>

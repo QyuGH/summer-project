@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #00001b;
+    --color-secondary: #13003b;
+    --color-tertiary: #210051;
+    --color-extra-1: #2b0056;
+    --color-extra-2: #320261; 
+    --color-light-1: #fffff9;
+    --color-light-2: #fffff9cc;
+    --font-weight-huge: 700;
+    --font-weight-normal: 400;
+}
+
+@layer base {
+    * {
+        @apply text-light-2;
+    }
+
+    h1 {
+        @apply text-light-1 font-huge;
+    }
+
+    p {
+        @apply text-sm;
+    }
+}
+
+@layer utilities {
+    .home-page {
+        height: calc(100dvh - 3.5rem);
+        max-height: 40rem;
+    }
+}

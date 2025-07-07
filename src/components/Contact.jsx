@@ -41,7 +41,7 @@ function Contact(){
                 <h1>Send me email</h1>
                 <div id="form" className="flex flex-col">
                     <label htmlFor="email">Email: </label>
-                    <input type="email" name="email"/>
+                    <input type="email" id="email" name="email"/>
 
                     <label htmlFor="message">Message</label>
                     <textarea name="message" id="message" placeholder="Hi, I would like to..."></textarea>
