@@ -16,13 +16,12 @@ function Cards() {
   return (
     <>
       {icons.map((icon) => (
-        <div key={icon.name} className="flex flex-col gap-2 items-center border-1">
+        <div
+          key={icon.name}
+          className="flex flex-col gap-2 items-center border-1 p-4 rounded"
+        >
           <div className="overflow-hidden w-8 h-8 md:w-12 md:h-12">
-            <img
-              src={icon.file}
-              alt={icon.name}
-              className="w-ful h-full"
-            />
+            <img src={icon.file} alt={icon.name} className="w-ful h-full" />
           </div>
           <p className="">{icon.name}</p>
         </div>
