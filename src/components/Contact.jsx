@@ -8,7 +8,7 @@ function Details({ icon, label, link }) {
       <div className="flex justify-center items-center w-7 h-7 border-1 rounded">
         <FontAwesomeIcon icon={icon} className="text-lg" />
       </div>
-      <a href={link} className="text-light-1">
+      <a href={link} target="_blank" className="text-light-1">
         <p>{label}</p>
       </a>
     </div>
@@ -25,8 +25,16 @@ function Contact() {
         </div>
 
         <div id="socials-container" className="flex flex-col gap-2">
-          <Details icon={faFacebook} label="Mark Anton" link="#"></Details>
-          <Details icon={faGithub} label="QyuGH" link="#"></Details>
+          <Details
+            icon={faFacebook}
+            label="Mark Anton"
+            link="https://web.facebook.com/marqyu.cahutay"
+          ></Details>
+          <Details
+            icon={faGithub}
+            label="QyuGH"
+            link="https://github.com/QyuGH"
+          ></Details>
           <Details icon={faPhone} label="+63-906-566-5404"></Details>
           <Details
             icon={faLocationDot}
