@@ -40,7 +40,7 @@ function Header() {
         id="sidebar"
         className={`${
           isOpen ? "right-0" : "-right-full"
-        } sm:hidden fixed top-10 z-20 w-1/2 h-lvh bg-secondary transition-right duration-500 ease`}
+        } sm:hidden fixed top-15 z-20 w-1/2 h-lvh bg-secondary transition-right duration-500 ease`}
       >
         <nav className="flex flex-col items-center w-full gap-4 py-4">
           <a href="#home">Home</a>

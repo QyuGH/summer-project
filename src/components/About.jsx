@@ -28,8 +28,8 @@ function About(){
             </p>
             <br />
             <p>
-              As I go through my career, I aim to become a Software Engineer and
-              help contribute to our society by building software
+              As I grow through my career, I aim to become a Software Engineer
+              and help contribute to our society by building software
               solutions—useful for everybody.
             </p>
           </div>
