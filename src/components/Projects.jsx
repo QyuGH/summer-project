@@ -1,25 +1,32 @@
 function ProjectCard({title, path, description, tech}){
 
     return (
-        <div className="flex flex-col gap-4 border-1 aspect-square w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl">
-            <div className="w-full h-1/2 overflow-hidden">
-                <img src={path} alt={title} className="w-full h-full object-cover" />
-            </div>
-
-            <div className="flex flex-col gap-4 px-4">
-                
-                <div>
-                    <h1>{title}</h1>
-                    <p className="text-xs md:text-sm">{description}</p>
-                </div>
-
-                <div className="mt-auto">
-                    <p className="text-xs md:text-sm"><span className="font-bold">Tech Stack: </span>{tech}</p>
-                </div>
-            </div>
-
+      <div className="flex flex-col gap-4 border-1 aspect-square w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl">
+        <div className="w-full h-1/2 overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}${
+              path.startsWith("/") ? path.slice(1) : path
+            }`}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
         </div>
-    )
+
+        <div className="flex flex-col gap-4 px-4">
+          <div>
+            <h1>{title}</h1>
+            <p className="text-xs md:text-sm">{description}</p>
+          </div>
+
+          <div className="mt-auto">
+            <p className="text-xs md:text-sm">
+              <span className="font-bold">Tech Stack: </span>
+              {tech}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
 }
 
 function Projects(){
