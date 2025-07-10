@@ -19,7 +19,7 @@
     }
 
     h1 {
-        @apply text-light-1 font-huge text-transparent bg-clip-text bg-gradient-to-b from-blue-800 to-purple-800 font-bold;
+        @apply font-huge text-transparent bg-clip-text bg-gradient-to-b from-blue-800 to-purple-800;
     }
 
     p {
