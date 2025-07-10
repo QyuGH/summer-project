@@ -2,6 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark, faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
+function Navigation({ title, link, util }) {
+  return (
+    <a href={link} className={util}>
+      {title}
+    </a>
+  );
+}
+
 function Header() {
   const [isOpen, setOpen] = useState(false);
 
@@ -9,40 +17,16 @@ function Header() {
     <>
       <header
         id="header"
-        className="flex justify-between p-4 sticky top-0 bg-secondary z-30"
+        className="flex justify-between items-center p-4 sticky top-0 bg-secondary z-30"
       >
         <h1 className="text-2xl">Anton</h1>
+
         <nav className="hidden sm:flex gap-4">
-          <a
-            href="#home"
-            className=" hover:text-primary py-3 transition-all duration-300 ease"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className=" hover:text-primary py-3 transition-all duration-300 ease"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className=" hover:text-primary py-3 transition-all duration-300 ease"
-          >
-            Projects
-          </a>
-          <a
-            href="#skills"
-            className=" hover:text-primary py-3 transition-all duration-300 ease"
-          >
-            Skills
-          </a>
-          <a
-            href="#contact"
-            className=" hover:text-primary py-3 transition-all duration-300 ease"
-          >
-            Contact
-          </a>
+          <Navigation title="Home" link="#home" util="nav"></Navigation>
+          <Navigation title="About" link="#about" util="nav"></Navigation>
+          <Navigation title="Projects" link="#projects" util="nav"></Navigation>
+          <Navigation title="Skills" link="#skills" util="nav"></Navigation>
+          <Navigation title="Contact" link="#contact" util="nav"></Navigation>
         </nav>
         <div
           className="block w-6 h-6 sm:hidden"
@@ -68,36 +52,27 @@ function Header() {
         } sm:hidden fixed top-15 z-20 w-1/2 h-lvh bg-secondary transition-right duration-500 ease`}
       >
         <nav className="flex flex-col text-center w-full">
-          <a
-            href="#home"
-            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
-          >
-            Projects
-          </a>
-          <a
-            href="#skills"
-            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
-          >
-            Skills
-          </a>
-          <a
-            href="#contact"
-            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
-          >
-            Contact
-          </a>
+          <Navigation title="Home" link="#home" util="mobile-nav"></Navigation>
+          <Navigation
+            title="About"
+            link="#about"
+            util="mobile-nav"
+          ></Navigation>
+          <Navigation
+            title="Projects"
+            link="#projects"
+            util="mobile-nav"
+          ></Navigation>
+          <Navigation
+            title="Skills"
+            link="#skills"
+            util="mobile-nav"
+          ></Navigation>
+          <Navigation
+            title="Contact"
+            link="#contact"
+            util="mobile-nav"
+          ></Navigation>
         </nav>
       </div>
     </>

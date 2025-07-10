@@ -18,7 +18,7 @@ function Cards() {
       {icons.map((icon) => (
         <div
           key={icon.name}
-          className="flex flex-col gap-2 items-center border-1 p-4 rounded"
+          className="flex flex-col gap-2 items-center border-1 p-4 rounded skill-card"
         >
           <div className="overflow-hidden w-8 h-8 md:w-12 md:h-12">
             <img
@@ -29,7 +29,7 @@ function Cards() {
               className="w-ful h-full"
             />
           </div>
-          <p className="">{icon.name}</p>
+          <p className="text-light-1">{icon.name}</p>
         </div>
       ))}
     </>

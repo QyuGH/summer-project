@@ -10,7 +10,7 @@ function Footer(){
             href="https://github.com/QyuGH"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500"
+            className="text-transparent bg-clip-text bg-gradient-to-b from-blue-800 to-purple-800 font-bold"
           >
             Anton
           </a>{" "}

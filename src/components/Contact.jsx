@@ -9,9 +9,7 @@ function Details({ icon, label, link }) {
         <FontAwesomeIcon icon={icon} className="text-lg" />
       </div>
       <a href={link} target="_blank">
-        <p className="text-light-1 hover:text-secondary transition-all duration-300 ease">
-          {label}
-        </p>
+        <p className="text-light-1 detail">{label}</p>
       </a>
     </div>
   );

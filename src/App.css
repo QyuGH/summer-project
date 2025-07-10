@@ -1,5 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    font-size: 16px;
+    --color-primary: #00001b;
+    --color-secondary: #13003b;
+    --color-tertiary: #210051;
+    --color-extra-1: #2b0056;
+    --color-extra-2: #320261; 
+    --color-light-1: #fffff9;
+    --color-light-2: #fffff9aa;
+    --font-weight-huge: 700;
+    --font-weight-normal: 400;
+}
+
 * {
     font-family: "Poppins", sans-serif;
+}
+
+.nav {  
+    padding: .75rem .5rem;
+    transition: all 0.3s ease;
+}
+
+.nav:hover {
+    color: var(--color-extra-2);
+}
+
+.mobile-nav {
+    padding: .75rem;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav:hover {
+    background-color: var(--color-primary);
+}
+
+.detail {
+    transition: all 0.3s ease;
+}
+
+.detail:hover {
+    color: var(--color-extra-2);
+}
+
+.profile-img {
+    transition: all 0.5s ease; 
+}
+
+.profile-img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.overlay {
+    transition: opacity 0.5s ease;
+}
+
+.project-card {
+    transition: all 0.5s ease; 
+}
+
+.project-img {
+    transition: transform 0.5s ease 
+}
+
+.site-link {
+    transition: all 0.5s ease;
+}
+
+.project-card:hover {
+    cursor: pointer;
+    transform: scale(1.03); 
+    background-color: var(--color-secondary);
+}
+
+.project-card:hover .site-link {
+    bottom: 1rem;
+}
+
+.project-card:hover .project-img{
+    transform: scale(1.1); 
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.skill-card {
+    transition: all 0.5s ease;
+}
+
+.skill-card:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary);
+    transform: scale(1.03);
 }
