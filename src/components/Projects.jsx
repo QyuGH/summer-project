@@ -1,26 +1,27 @@
 function ProjectCard({ title, path, description, tech, link }) {
   return (
-    <div className="flex flex-col gap-4 border-1 aspect-square w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl">
+    <div className="flex flex-col gap-4 border-1 aspect-square w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl transition-all duration-500 ease hover:scale-103 hover:bg-secondary hover:cursor-pointer group">
       <div className="w-full h-1/2 overflow-hidden relative">
+        <div className="absolute inset-0 bg-black/50 z-10 opacity-0 transition-opacity duration-500 ease group-hover:opacity-100 group-hover:cursor-pointer"></div>
         <img
           src={`${import.meta.env.BASE_URL}${
             path.startsWith("/") ? path.slice(1) : path
           }`}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 ease group-hover:scale-110"
         />
 
         <div
-          className="absolute bottom-3 left-1/2 transform -translate-x-1/2 sm:hidden 
-              bg-black/30 backdrop-blur-sm text-light-1 px-3 py-2 rounded z-10 shadow-md"
+          className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 
+               bg-white/50 px-3 p-1 rounded z-100 shadow-lg transition-bottom duration-500 ease group-hover:bottom-3"
         >
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-400"
+            className="text-sm text-black "
           >
-            View Site
+            Visit Site
           </a>
         </div>
       </div>
@@ -28,7 +29,7 @@ function ProjectCard({ title, path, description, tech, link }) {
       <div className="flex flex-col gap-4 px-4">
         <div>
           <h1>{title}</h1>
-          <p className="text-xs md:text-sm">{description}</p>
+          <p className="text-xs md:text-sm text-light-2">{description}</p>
         </div>
 
         <div className="mt-auto">

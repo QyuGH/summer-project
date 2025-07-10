@@ -13,11 +13,36 @@ function Header() {
       >
         <h1 className="text-2xl">Anton</h1>
         <nav className="hidden sm:flex gap-4">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a
+            href="#home"
+            className=" hover:text-primary py-3 transition-all duration-300 ease"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className=" hover:text-primary py-3 transition-all duration-300 ease"
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            className=" hover:text-primary py-3 transition-all duration-300 ease"
+          >
+            Projects
+          </a>
+          <a
+            href="#skills"
+            className=" hover:text-primary py-3 transition-all duration-300 ease"
+          >
+            Skills
+          </a>
+          <a
+            href="#contact"
+            className=" hover:text-primary py-3 transition-all duration-300 ease"
+          >
+            Contact
+          </a>
         </nav>
         <div
           className="block w-6 h-6 sm:hidden"
@@ -42,12 +67,37 @@ function Header() {
           isOpen ? "right-0" : "-right-full"
         } sm:hidden fixed top-15 z-20 w-1/2 h-lvh bg-secondary transition-right duration-500 ease`}
       >
-        <nav className="flex flex-col items-center w-full gap-4 py-4">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+        <nav className="flex flex-col text-center w-full">
+          <a
+            href="#home"
+            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
+          >
+            Projects
+          </a>
+          <a
+            href="#skills"
+            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
+          >
+            Skills
+          </a>
+          <a
+            href="#contact"
+            className=" hover:bg-primary py-3 transition-bg duration-300 ease"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </>

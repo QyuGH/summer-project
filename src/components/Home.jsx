@@ -8,8 +8,10 @@ function Details({ icon, label, link }) {
       <div className="flex justify-center items-center w-7 h-7 border-1 rounded">
         <FontAwesomeIcon icon={icon} className="text-lg" />
       </div>
-      <a href={link} target="_blank" className="text-light-1">
-        <p>{label}</p>
+      <a href={link} target="_blank">
+        <p className="text-light-1 hover:text-secondary transition-all duration-300 ease">
+          {label}
+        </p>
       </a>
     </div>
   );

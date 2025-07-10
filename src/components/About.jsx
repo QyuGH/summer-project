@@ -9,7 +9,7 @@ function About(){
         <div className="flex flex-col items-center sm:items-start sm:flex-row gap-4">
           <div
             id="pfp-container"
-            className="w-full sm:w-1/2 aspect-square max-w-sm sm:max-w-md rounded-2xl overflow-hidden"
+            className="w-full sm:w-1/2 aspect-square max-w-sm sm:max-w-md rounded-2xl overflow-hidden transition-all duration-500 ease hover:scale-105 hover:cursor-pointer"
           >
             <img
               src={`${import.meta.env.BASE_URL}img/pfp.jpg`}
