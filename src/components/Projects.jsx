@@ -1,3 +1,5 @@
+import { SlideLeft, SlideUp } from "../motion/Motions";
+
 function ProjectCard({ title, path, description, tech, link }) {
   return (
     <div className="flex flex-col gap-4 border-1 aspect-square w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl project-card ">
@@ -72,8 +74,15 @@ function Projects() {
   return (
     <section id="projects" className="flex flex-col gap-4">
       <div>
-        <h1 className="text-4xl sm:text-5xl">PROJECTS</h1>
-        <p>Below are the projects I made throughout my learning journey</p>
+        <SlideLeft
+          tag="h1"
+          children="PROJECTS"
+          className="text-4xl sm:text-5xl"
+        />
+        <SlideUp
+          tag="p"
+          children="Below are the projects I made throughout my learning journey"
+        />
       </div>
 
       <div

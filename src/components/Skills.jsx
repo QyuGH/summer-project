@@ -1,3 +1,5 @@
+import { SlideLeft, SlideUp } from "../motion/Motions";
+
 function Cards() {
   const icons = [
     { file: "/tools/html.svg", name: "HTML" },
@@ -36,22 +38,29 @@ function Cards() {
   );
 }
 
-function Skills(){
-    return (
-        <section id="skills" className="flex flex-col gap-4">
-            
-            <div>
-                <h1 className="text-4xl sm:text-5xl">SKILLS</h1>
-                <p>Below are the tools and technologies I use</p>
-            </div>
+function Skills() {
+  return (
+    <section id="skills" className="flex flex-col gap-4">
+      <div>
+        <SlideLeft
+          tag="h1"
+          children="SKILLS"
+          className="text-4xl sm:text-5xl"
+        />
+        <SlideUp
+          tag="p"
+          children="Below are the tools and technologies I used"
+        />
+      </div>
 
-            <div id="skill-container" className="grid grid-cols-3 md:grid-cols-4 gap-4">
-
-                <Cards></Cards>
-            
-            </div>
-        </section>
-    )
+      <div
+        id="skill-container"
+        className="grid grid-cols-3 md:grid-cols-4 gap-4"
+      >
+        <Cards></Cards>
+      </div>
+    </section>
+  );
 }
 
-export default Skills
+export default Skills;

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark, faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { SlideLeft } from "../motion/Motions";
 
 function Navigation({ title, link, util }) {
   return (
@@ -19,7 +20,7 @@ function Header() {
         id="header"
         className="flex justify-between items-center p-4 sticky top-0 bg-secondary z-30"
       >
-        <h1 className="text-2xl">Anton</h1>
+        <SlideLeft tag="h1" children="Anton" className="text-2xl" />
 
         <nav className="hidden sm:flex gap-4">
           <Navigation title="Home" link="#home" util="nav"></Navigation>
