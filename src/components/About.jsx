@@ -36,6 +36,8 @@ function About() {
             className="text-3xl hidden md:block"
           />
           <SlideLeft
+            amount={0.3}
+            delay={0.3}
             tag="p"
             children="an aspiring developer from Iloilo currently taking up Bachelor's of
             Science in Information Technology at Iloilo Science and Technology
@@ -45,6 +47,8 @@ function About() {
           />
 
           <SlideUp
+            amount={0.2}
+            delay={0.2}
             tag="p"
             children="an aspiring developer from Iloilo currently taking up Bachelor's of
             Science in Information Technology at Iloilo Science and Technology
@@ -54,6 +58,8 @@ function About() {
           />
           <br />
           <SlideLeft
+            amount={0.5}
+            delay={0.5}
             tag="p"
             children="As I grow through my career, I aim to become a Software Engineer and
             help contribute to our society by building software solutions—useful
@@ -62,6 +68,8 @@ function About() {
           />
 
           <SlideUp
+            amount={0.3}
+            delay={0.3}
             tag="p"
             children="As I grow through my career, I aim to become a Software Engineer and
             help contribute to our society by building software solutions—useful

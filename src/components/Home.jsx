@@ -45,6 +45,7 @@ function Home() {
       className="flex flex-col gap-4 items-center justify-center home-page"
     >
       <SlideLeft
+        once={true}
         tag="h1"
         children="MARK ANTON CAHUTAY"
         className="text-4xl sm:text-5xl text-center"

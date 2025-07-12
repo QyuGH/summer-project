@@ -18,13 +18,13 @@ function Details({ icon, label, link }) {
 function Contact() {
   return (
     <section id="contact" className="flex flex-col md:flex-row gap-4">
-      <div className="flex flex-col border-1 items-start gap-4 p-4 w-full md:w-2/3 rounded-2xl">
+      <div className="flex flex-col border-1 items-start gap-8 p-4 w-full md:w-1/3 rounded-2xl">
         <div>
           <h1>Get in touch</h1>
           <p>Feel free to reach me out directly.</p>
         </div>
 
-        <div id="socials-container" className="flex flex-col gap-2">
+        <div id="socials-container" className="flex flex-col gap-4">
           <Details
             icon={faFacebook}
             label="Mark Anton"
@@ -43,7 +43,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="border-1 p-4 w-full rounded-2xl">
+      <form className="border-1 p-4 w-full rounded-2xl">
         <h1>Send me an email</h1>
         <div id="form" className="flex flex-col">
           <label htmlFor="email">Email: </label>
@@ -59,7 +59,10 @@ function Contact() {
             placeholder="Hi, I would like to..."
           ></textarea>
         </div>
-      </div>
+        <button className="w-full bg-secondary rounded-md py-2 mt-4">
+          Send
+        </button>
+      </form>
     </section>
   );
 }

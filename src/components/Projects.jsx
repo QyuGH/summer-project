@@ -89,15 +89,41 @@ function Projects() {
         id="project-container"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center"
       >
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            path={project.path}
-            description={project.description}
-            link={project.link}
-            tech={project.tech}
-          />
+        {projects.map((project, index) => (
+          <>
+            <SlideUp
+              key={`project-${index}-mobile`}
+              amount={0.3}
+              delay={0.1}
+              distance={10}
+              className="md:hidden"
+            >
+              <ProjectCard
+                title={project.title}
+                path={project.path}
+                description={project.description}
+                link={project.link}
+                tech={project.tech}
+              />
+            </SlideUp>
+
+            <SlideUp
+              key={`project-${index}-desktop`}
+              duration={1}
+              amount={0.3}
+              delay={index * 0.3}
+              distance={50}
+              className="hidden md:block"
+            >
+              <ProjectCard
+                title={project.title}
+                path={project.path}
+                description={project.description}
+                link={project.link}
+                tech={project.tech}
+              />
+            </SlideUp>
+          </>
         ))}
       </div>
     </section>
