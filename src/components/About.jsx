@@ -13,16 +13,20 @@ function About() {
       </div>
 
       <div className="flex flex-col items-center sm:items-start sm:flex-row gap-4">
-        <div
+        <SlideLeft
+          duration={0.8}
+          amount={0.3}
+          delay={0.3}
+          once={true}
           id="pfp-container"
-          className="w-full sm:w-1/2 aspect-square max-w-sm sm:max-w-md rounded-2xl overflow-hidden profile-img"
+          className="w-full sm:w-1/2 aspect-square max-w-sm sm:max-w-md rounded-2xl overflow-hidden profile-img hover:scale-105"
         >
           <img
             src={`${import.meta.env.BASE_URL}img/pfp.jpg`}
             alt="Profile Picture"
             className="w-full h-full object-cover"
           />
-        </div>
+        </SlideLeft>
 
         <div id="details-container" className="w-full">
           <SlideLeft
@@ -61,9 +65,8 @@ function About() {
             amount={0.5}
             delay={0.5}
             tag="p"
-            children="As I grow through my career, I aim to become a Software Engineer and
-            help contribute to our society by building software solutions—useful
-            for everybody."
+            children="As I grow in my career, I aspire to become a Software Engineer and
+            help contribute to our society by building software solutions that are useful and accessible for everyone."
             className="md:hidden"
           />
 
@@ -71,9 +74,8 @@ function About() {
             amount={0.3}
             delay={0.3}
             tag="p"
-            children="As I grow through my career, I aim to become a Software Engineer and
-            help contribute to our society by building software solutions—useful
-            for everybody."
+            children="As I grow in my career, I aspire to become a Software Engineer and
+            help contribute to our society by building software solutions that are useful and accessible for everyone."
             className="md:block hidden"
           />
         </div>
